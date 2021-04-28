@@ -14,6 +14,9 @@
     <div id="post"></div>
 
     <script>
-        // ...
+        function ajax(config) {
+            const xhr = new XMLHttpRequest()
+            xhr.open("GET", config.url, true)
+        }
     </script>
 </body>
