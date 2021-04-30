@@ -14,6 +14,18 @@
     <div id="post"></div>
 
     <script>
-        // ...
+        function exibirResultado(id, dados) {
+            const texto = JSON.stringify(dados)
+            document.getElementById(id).innerHTML = texto
+        }
+        axios.get('parOuImpar', {
+            params: {
+                numero: 10
+            }
+        }).then((resp) => {
+            exibirResultado('get', resp.data)
+        }).catch((err) => {
+            console.log(err)
+        });
     </script>
 </body>
